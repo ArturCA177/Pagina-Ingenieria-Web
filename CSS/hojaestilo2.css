@@ -1,0 +1,33 @@
+header
+{
+    background-color: rebeccapurple;
+    color: whitesmoke;
+}
+
+.main
+{
+    background-color: burlywood;
+}
+
+aside
+{
+    background: rgb(51, 75, 153);
+    color: whitesmoke;
+}
+
+.color1
+{
+    background: rgb(192, 176, 157);
+}
+
+.color
+{
+    background: rgb(153, 156, 101);
+}
+
+footer
+{
+    background: rgb(23,158,211);
+    color: blue;
+}
+

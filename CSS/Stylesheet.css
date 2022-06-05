@@ -1,0 +1,399 @@
+/*Transiciones*/
+.Transicion{
+    background: red;
+    width: 200px;
+    height: 200px;
+    margin: 200px;
+    transition: background-color; /*Propiedad trea*/
+}
+
+.Transicion:hover{
+    background:blue; 
+    width: 400px;
+}
+
+.Transicion2{
+    background: red;
+    width: 200px;
+    height: 200px;
+    margin: 200px;
+    transition: background-color, width 2s; /* accion tiempo*/
+}
+.Transicion2:active{
+    background:blue; 
+    width: 400px;
+}
+
+.Transicion3{
+    background: green;
+    width: 200px;
+    height: 200px;
+    margin: 200px;
+    clip-path: circle(50% at top left);
+    transition-property:clip-path;/*propiedad clip path*/
+    transition-duration: 2s;
+}
+.Transicion3:hover{
+    clip-path: circle(150% at top left);/*aumentamos circulo hasta tapar cuadrado*/
+}
+
+.Transicion4{
+    background: pink;
+    width: 200px;
+    height: 200px;
+    margin: 200px;
+    clip-path: circle(50% at top left);
+    transition-property:clip-path;/*propiedad clip path*/
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;/*ease default ease-in velocidad del efecto  */
+    transition-delay: 1s; /*retraso de la animacion total*/
+}
+.Transicion4:hover{
+    clip-path: circle(150% at top left);
+}
+.Imagen{
+width: 600px;
+height: 350px;
+background: url(NINE.jpg);/*Primer imagen */
+background-repeat: no-repeat;
+background-size: cover;
+transition-property: background;
+transition-duration: 2s;
+
+}
+.Imagen:hover{
+    background: url(MOTTRI.jpg);/*Segunda Imagen */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Animaciones*/
+
+.Animacion{
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    background: blue;
+    border-radius:50% ;
+    animation-name:cambiaColor ;
+    animation-duration: 3s;/*Duracion Animacion*/
+}
+@keyframes cambiaColor{
+    0%{
+        background-color: red;
+    }   /*Cambio progresivo, frame a frame*/
+    100%{
+        background-color: purple;
+    }
+}
+
+.Animacion2{
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    background: blue;
+    border-radius:50% ;
+    animation-name:cambiaColor2 ;
+    animation-duration: 3s;
+}
+@keyframes cambiaColor2{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(.3);
+    }
+}
+.Animacion3{
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    background: yellow;
+    border-radius:50% ;
+    animation-name:cambiaColor3 ;
+    animation-duration: 3s;
+    animation-iteration-count: 2;/*Numero de veces que se realizara la animacion*/
+}
+@keyframes cambiaColor3{
+    0%{
+        transform: scale(1);
+    }/*Cambia escala, cambia tamaño*/
+    100%{
+        transform: scale(.3);
+    }
+}
+.Animacion4{
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    background: yellow;
+    border-radius:50% ;
+    animation-name:cambiaColor4 ;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes cambiaColor4{
+    0%{
+        transform: translateX(0);
+    }/*Traslado frame a frame de la animacion*/
+    100%{
+        transform: translateX(100%) translateY(100%);
+        background-color: red;
+    }
+}
+.Animacion5{
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    background: yellow;
+    border-radius:50% ;
+    animation-name:cambiaColor5 ;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;/*Cambio de direccion*/
+}
+@keyframes cambiaColor5{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100%) translateY(100%);
+        background-color: red;
+    }
+}
+.Animacion6{
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    background: pink;
+    border-radius:50% ;
+    animation-name:cambiaColor6 ;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear; /*ease default ease-in velocidad del efecto  */
+
+}
+@keyframes cambiaColor6{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100%) translateY(100%);
+        background-color: purple;
+    }
+}
+
+.Animacion7{
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    background: goldenrod;
+    border-radius:50% ;
+    animation-name:cambiaColor7 ;
+    animation-duration: 2s;
+    animation-timing-function: linear; /*ease default ease-in velocidad del efecto  */
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+}
+.Animacion7:hover{
+    animation-play-state: paused;/*Union de animaciones con transiciones*/
+}
+@keyframes cambiaColor7{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100%) translateY(100%);
+        background-color: silver;
+    }
+}
+
+.Load{
+    border: 4px solid blue;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-left-color:grey ;
+    animation: spiner 1s ease-in-out infinite;/* animacion duracion efecto ciclos*/
+}
+@keyframes spiner{
+    0%{
+        transform: rotate(0deg)
+
+    }
+    100%{
+        transform: rotate(360deg)
+
+    }
+}
+
+
+
+/* From uiverse.io by @namecho */
+/*
+button,
+button::after {
+ padding: 16px 20px;
+ font-size: 18px;
+ background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+ border: 0;
+ color: #fff;
+ letter-spacing: 3px;
+ line-height: 1;
+ box-shadow: 6px 0px 0px #00e6f6;
+ outline: transparent;
+ position: relative;
+}
+
+button::after {
+ --slice-0: inset(50% 50% 50% 50%);
+ --slice-1: inset(80% -6px 0 0);
+ --slice-2: inset(50% -6px 30% 0);
+ --slice-3: inset(10% -6px 85% 0);
+ --slice-4: inset(40% -6px 43% 0);
+ --slice-5: inset(80% -6px 5% 0);
+ content: "HOVER ME";
+ display: block;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ff013c 5%);
+ text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+ clip-path: var(--slice-0);
+}
+
+button:hover::after {
+ animation: 1s glitch;
+ animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+ 0% {
+  clip-path: var(--slice-1);
+  transform: translate(-20px, -10px);
+ }
+
+ 10% {
+  clip-path: var(--slice-3);
+  transform: translate(10px, 10px);
+ }
+
+ 20% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 10px);
+ }
+
+ 30% {
+  clip-path: var(--slice-3);
+  transform: translate(0px, 5px);
+ }
+
+ 40% {
+  clip-path: var(--slice-2);
+  transform: translate(-5px, 0px);
+ }
+
+ 50% {
+  clip-path: var(--slice-3);
+  transform: translate(5px, 0px);
+ }
+
+ 60% {
+  clip-path: var(--slice-4);
+  transform: translate(5px, 10px);
+ }
+
+ 70% {
+  clip-path: var(--slice-2);
+  transform: translate(-10px, 10px);
+ }
+
+ 80% {
+  clip-path: var(--slice-5);
+  transform: translate(20px, -10px);
+ }
+
+ 90% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 0px);
+ }
+
+ 100% {
+  clip-path: var(--slice-1);
+  transform: translate(0);
+ }
+}*/
+
+/* From uiverse.io by @barisdogansutcu */
+button {
+    border: none;
+    position: relative;
+    width: 200px;
+    height: 73px;
+    padding: 0;
+    z-index: 2;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='868' width='2500' viewBox='0 0 726 252.17'%3E%3Cpath d='M483.92 0S481.38 24.71 466 40.11c-11.74 11.74-24.09 12.66-40.26 15.07-9.42 1.41-29.7 3.77-34.81-.79-2.37-2.11-3-21-3.22-27.62-.21-6.92-1.36-16.52-2.82-18-.75 3.06-2.49 11.53-3.09 13.61S378.49 34.3 378 36a85.13 85.13 0 0 0-30.09 0c-.46-1.67-3.17-11.48-3.77-13.56s-2.34-10.55-3.09-13.61c-1.45 1.45-2.61 11.05-2.82 18-.21 6.67-.84 25.51-3.22 27.62-5.11 4.56-25.38 2.2-34.8.79-16.16-2.47-28.51-3.39-40.21-15.13C244.57 24.71 242 0 242 0H0s69.52 22.74 97.52 68.59c16.56 27.11 14.14 58.49 9.92 74.73C170 140 221.46 140 273 158.57c69.23 24.93 83.2 76.19 90 93.6 6.77-17.41 20.75-68.67 90-93.6 51.54-18.56 103-18.59 165.56-15.25-4.21-16.24-6.63-47.62 9.93-74.73C656.43 22.74 726 0 726 0z'/%3E%3C/svg%3E") no-repeat 50% 50%;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='868' width='2500' viewBox='0 0 726 252.17'%3E%3Cpath d='M483.92 0S481.38 24.71 466 40.11c-11.74 11.74-24.09 12.66-40.26 15.07-9.42 1.41-29.7 3.77-34.81-.79-2.37-2.11-3-21-3.22-27.62-.21-6.92-1.36-16.52-2.82-18-.75 3.06-2.49 11.53-3.09 13.61S378.49 34.3 378 36a85.13 85.13 0 0 0-30.09 0c-.46-1.67-3.17-11.48-3.77-13.56s-2.34-10.55-3.09-13.61c-1.45 1.45-2.61 11.05-2.82 18-.21 6.67-.84 25.51-3.22 27.62-5.11 4.56-25.38 2.2-34.8.79-16.16-2.47-28.51-3.39-40.21-15.13C244.57 24.71 242 0 242 0H0s69.52 22.74 97.52 68.59c16.56 27.11 14.14 58.49 9.92 74.73C170 140 221.46 140 273 158.57c69.23 24.93 83.2 76.19 90 93.6 6.77-17.41 20.75-68.67 90-93.6 51.54-18.56 103-18.59 165.56-15.25-4.21-16.24-6.63-47.62 9.93-74.73C656.43 22.74 726 0 726 0z'/%3E%3C/svg%3E") no-repeat 50% 50%;
+    -webkit-mask-size: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    transform: translateY(8px)
+   }
+   
+   button:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0px 0 0 0 white;
+    transition: all 2s ease;
+   }
+   
+   button:hover:after {
+    box-shadow: 0px -13px 56px 12px #ffffffa6;
+   }
+   
+   button span {
+    position: absolute;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 100;
+    left: 50%;
+    top: 39%;
+    letter-spacing: 3px;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    color: black;
+    transition: all 2s ease;
+   }
+   
+   button:hover span {
+    color: white;
+   }
+   
+   button:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: black;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s ease;
+   }
+   
+   button:hover:before {
+    width: 100%;
+   }
